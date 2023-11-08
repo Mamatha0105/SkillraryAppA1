@@ -8,7 +8,7 @@ import org.testng.asserts.SoftAssert;
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
 
-// This script Likely Fails
+
 public class CreateUserTest extends BaseClass{
 	@Test
 	public void createUserTest() {
