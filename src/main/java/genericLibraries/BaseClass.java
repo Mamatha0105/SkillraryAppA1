@@ -75,9 +75,11 @@ public class BaseClass {
 		
 		long time=Long.parseLong(property.readFromProperties("timeouts"));
 		webUtil.waitTillElementFound(time);
-		 Assert.assertEquals(login.getPageHeader(),"Login");
+		
 		
 		welcome.clickLoginButton();
+		 Assert.assertEquals(login.getPageHeader(),"Login");
+		 
 		login.setEmail(property.readFromProperties("username"));
 		login.setPassword(property.readFromProperties("password"));
 		login.clickLogin();

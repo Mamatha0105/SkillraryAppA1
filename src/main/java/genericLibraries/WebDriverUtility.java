@@ -264,7 +264,7 @@ public class WebDriverUtility {
 	/**
 	 * This method is used to switch to child Browser
 	 */
-	public void handleChildBrowser() {
+	public void switchToChildBrowser() {
 		Set<String> set = driver.getWindowHandles();
 		for (String windowID : set) {
 			driver.switchTo().window(windowID);

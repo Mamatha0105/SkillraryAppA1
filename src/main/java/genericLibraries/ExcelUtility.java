@@ -66,15 +66,14 @@ public class ExcelUtility {
 			}
 			return map;
 		}
-			
-	public void closeExcel() {
-				try {
-					wb.close();
-				}
-				catch(IOException e) {
-					e.printStackTrace();
-				}
-			}
+	
+	/**
+	 * This method is used to update test status in excel
+	 * @param sheetName
+	 * @param expectedTest
+	 * @param status
+	 * @param excelPath
+	 */
 	public void writeToExcel(String sheetName,String expectedTest,String status,String excelPath) {
 		Sheet sh=wb.getSheet(sheetName);
 		for(int i=0;i<=sh.getLastRowNum();i++) {
@@ -99,6 +98,22 @@ public class ExcelUtility {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * This method is used to close excel
+	 */
+		public void closeExcel() {
+			try {
+				wb.close();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	
+	
+
 			
 }
 	
